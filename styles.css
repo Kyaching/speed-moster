@@ -198,9 +198,3 @@ button {
     flex-direction: column;
   }
 }
-
-/* @media screen and (min-width: 701px) {
-  #histories {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
