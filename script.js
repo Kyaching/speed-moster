@@ -15,7 +15,6 @@ let questionText = "";
 fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
   });
@@ -72,7 +71,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -137,7 +136,7 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
 
   document.getElementById("show-time").innerHTML = `${
     startTime ? timeSpent : 0
