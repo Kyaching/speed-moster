@@ -191,7 +191,16 @@ button {
     padding: 0 20px;
     width: 100%;
   }
+  #histories {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .card {
     flex-direction: column;
   }
 }
+
+/* @media screen and (min-width: 701px) {
+  #histories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
