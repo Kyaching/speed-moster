@@ -70,60 +70,71 @@
       <section class="my-4">
         <div class="card">
           <div class="card-header">
-            Q.2: What is the difference between arrow function vs regular
-            function? ?
+            Q.2:Difference between global scope and block scope?
           </div>
           <div class="card-body">
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">SI</th>
-                  <th scope="col">arrow function vs regular function</th>
+                  <th scope="col">Global Scope</th>
+                  <th scope="col">Local Scope</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
                   <td>
-                    The first and most obvious difference between arrow
-                    functions and regular functions is their syntax. Not only do
-                    they look different, but arrow functions also provide an
-                    implicit return shorthand and allow parenthesis around a
-                    single argument to be omitted.
+                    A variable declared at the top of a program or outside of a
+                    function is considered a global scope variable.
+                  </td>
+                  <td>
+                    A variable can also have a local scope, i.e it can only be
+                    accessed within a function.
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td>
-                    Inside a regular function, execution context (i.e. the value
-                    of this) is dynamic. This means that the value of this
-                    depends on how the function was invoked (simple invocation,
-                    method invocation, indirect invocation or constructor
-                    invocation). On the other hand, an arrow function does not
-                    define its own execution context. This results in an arrow
-                    function's this being resolved lexically (i.e. the scope in
-                    which the arrow function was defined).
-                  </td>
+                  <td>We can access global scope variable inside a function</td>
+                  <td>Local scope variable cannot be excess outside</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td>
-                    Function.prototype.call(), Function.prototype.bind() and
-                    Function.prototype.apply() do not work correctly with arrow
-                    functions either. Their purpose is to allow methods to
-                    execute within different scopes, but the this value of an
-                    arrow function cannot be changed, as it's resolved
-                    lexically.
-                  </td>
+                  <td></td>
                 </tr>
                 <tr>
                   <th scope="row">4</th>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h4></h4>
+        <p></p>
+      </section>
+      <section class="my-4">
+        <div class="card">
+          <div class="card-header">Q.3: How JS event loop works?</div>
+          <div class="card-body">
+            <table class="table">
+              <tbody>
+                <tr>
                   <td>
-                    Due to arrow functions not defining their own execution
-                    context, they're not well-suited for usage as methods.
-                    However, thanks to the Class fields proposal, arrow
-                    functions can be used as methods inside classes, if your
-                    environment supports it.
+                    Event Loop : The event loop is the secret behind
+                    JavaScript's asynchronous programming. JS executes all
+                    operations on a single thread, but using a few smart data
+                    structures, it gives us the illusion of multi-threading.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    The Event Loop has one simple job — to monitor the Call
+                    Stack and the Callback Queue or Message Queue. If the Call
+                    Stack is empty, it will take the first event from the
+                    Callback queue and will push it to the Call Stack, which
+                    effectively runs it.Such an iteration is called a tick in
+                    the Event Loop. Each event is just a function callback.
                   </td>
                 </tr>
               </tbody>
@@ -136,58 +147,21 @@
       <section class="my-4">
         <div class="card">
           <div class="card-header">
-            Q.3:Difference between map, forEach, filter, find?
+            Q.4: Different types of undefined in JavaScript?
           </div>
           <div class="card-body">
             <table class="table">
               <tbody>
                 <tr>
                   <td>
-                    .map() executes the same code on every element in an array
-                    and returns a new array with the updated elements.
+                    The undefined type belongs to the primitive data types that
+                    can have only one value i.e. undefined. A variable that is
+                    declared/created but not assigned with a value anywhere in
+                    the program has a default value of “undefined”.
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    .forEach(), is used to execute the same code on every
-                    element in an array but does not change the array and it
-                    returns undefined.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    .filter() checks every element in an array to see if it
-                    meets a certain criteria and returns a new array with the
-                    elements that return truthy for the criteria.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    The find() method returns the first element in the provided
-                    array that satisfies the provided testing function. If no
-                    values satisfy the testing function, undefined is returned.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <h4></h4>
-        <p></p>
-      </section>
-      <section class="my-4">
-        <div class="card">
-          <div class="card-header">Q.4: Why we use template string?</div>
-          <div class="card-body">
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td>
-                    You can use template strings to write your string exactly
-                    how you want it to appear, without all the quotation marks
-                    and confusion. Template strings make it very easy to spot a
-                    missing space and make your string more readable.
-                  </td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
